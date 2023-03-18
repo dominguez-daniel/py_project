@@ -1,0 +1,18 @@
+version: 2
+jobs:
+    build:
+        docker:
+            - image: python:3.7.3-stretch
+        steps:
+            - checkout
+            - run:
+                name: Setup venv
+                command: |
+                    make setup
+                    source ~/.py_venv/bin/activate
+                    make install
+            - run:
+                name: lint app
+                command: |
+                    source ~/.py_venv/bin/activate
+                    make lint
