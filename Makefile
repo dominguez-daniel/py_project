@@ -1,8 +1,8 @@
 setup:
-	python3 -m venv ~/Desktop/py_venv
+	python3 -m venv ~/.py_venv
 
 activate:
-	source ~/Desktop/py_venv/bin/activate
+	source ~/.py_venv/bin/activate
 
 install:
 	pip install -r requirements.txt
